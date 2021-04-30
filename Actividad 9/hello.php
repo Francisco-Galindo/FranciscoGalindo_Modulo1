@@ -10,34 +10,37 @@
     <h1>Tablero</h1>
     <table border="1">
         <tbody>
-        <?php
-            // Para designar el tamaño del tablero
-            $n = 7;
 
-            // Variables para facilitar los echos donde se utilizará cada color
+        <?php
+            /* Se crea una tabla, en cada celda se desplegarán imagenes
+             blancas o negras para  representar un tablero de ajedrez de un tamaño dado */
+
+
+            $tamanoTablero = 8;
+
+            // Variables para facilitar la asignación de color
             $blanco = "<img width=\"50\" src=\"./blanco.jpg\">";
             $negro = "<img width=\"50\" src=\"./negro.jpg\">";
-            // Variable para tener control sobre el color de  la primer casilla de la fila anterior
-            $primerRellenoAnterior = $negro;
 
-            // Loop para las filas
-            for ($i = 0; $i < $n; $i++) {
+            // Repitiendose en cada fila
+            for ($i = 0; $i < $tamanoTablero; $i++) {
                 echo "<tr>";
 
-                // Loop para las columnas
-                for ($j = 0; $j < $n; $j++) {
-                    // Si es la primer casilla de la columna, que el relleno sea el color contrario al homólogo de la fila anterior
+                // Repitiendose por cada casilla de cada columna
+                for ($j = 0; $j < $tamanoTablero; $j++) {
+
+                    // Si es la primer casilla de la fila y el numero de fila es par,
+                    // que el color de la casilla sea negro, blanco si no
                     if ($j == 0) {
-                        $relleno = $primerRellenoAnterior == $blanco ? $negro : $blanco;
-                        $primerRellenoAnterior = $relleno;
+                        $colorCasilla = ($i % 2 == 0) ? $negro : $blanco;
                     }
-                    // De otra manera, que el relleno sea el color contrario a la casilla anterior
+                    // Que el relleno sea el color contrario a la casilla anterior
                     else {
-                        $relleno = $relleno == $blanco ? $negro : $blanco;
+                        $colorCasilla = $colorCasilla == $blanco ? $negro : $blanco;
                     }
                     
                     // Imprimiendo el contenido de la casilla
-                    echo "<td>" . $relleno . "</td>";
+                    echo "<td>" . $colorCasilla . "</td>";
                 }
                 echo "</tr>";
             }
