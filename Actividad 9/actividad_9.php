@@ -15,7 +15,6 @@
             /* Se crea una tabla, en cada celda se desplegarán imagenes
              blancas o negras para  representar un tablero de ajedrez de un tamaño dado */
 
-
             $tamanoTablero = 8;
 
             // Variables para facilitar la asignación de color
