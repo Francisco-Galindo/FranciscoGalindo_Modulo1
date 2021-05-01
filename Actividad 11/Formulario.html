@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taco</title>
+</head>
+<body>
+    <form action="./taco.php" method="POST">
+    <fieldset>
+        <legend><h1>¿Qué tipo de taco eres?</h1></legend>
+        <br>
+        <strong>¿Te gusta la carne?</strong><br>
+        <label>
+            <label>
+                <input type="radio" name="pregunta0" value="A" required>
+                Sí
+            </label>
+            <label>
+                <input type="radio" name="pregunta0" value="B">
+                Depende
+            </label>
+            <label>
+                <input type="radio" name="pregunta0" value="C">
+                Maso
+            </label>
+            <label>
+                <input type="radio" name="pregunta0" value="D">
+                No
+            </label>
+        </label>
+        <br><br>
+
+        <strong>¿Dónde prefieres comer?</strong><br>
+        <label>
+            <label>
+                <input type="radio" name="pregunta1" value="A" required>
+                Donde el hambre me detenga
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="pregunta1" value="B">
+                Prefiero pedir comida a domicilio
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="pregunta1" value="C">
+                En un restaurante con las mejores medidas de sanidad
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="pregunta1" value="D">
+                En donde ofrecen alternativas veganas
+            </label>
+        </label>
+        <br><br>
+
+        <strong>Prefieres tomar...</strong><br>
+        <label>
+            <label>
+                <input type="radio" name="pregunta2" value="A" required>
+                Un boing de mango
+            </label>
+            <label>
+                <input type="radio" name="pregunta2" value="B">
+                Una cerveza bien muerta
+            </label>
+            <label>
+                <input type="radio" name="pregunta2" value="C">
+                Coca-cola
+            </label>
+            <label>
+                <input type="radio" name="pregunta2" value="D">
+                Agua de Chia
+            </label>
+        </label>
+        <br><br>
+
+        <strong>¿A qué hora te gusta comer tacos?</strong><br>
+        <label>
+            <label>
+                <input type="radio" name="pregunta3" value="A" required>
+                En la tardecita
+            </label>
+            <label>
+                <input type="radio" name="pregunta3" value="B">
+                En la mañana
+            </label>
+            <label>
+                <input type="radio" name="pregunta3" value="C">
+                En la noche
+            </label>
+            <label>
+                <input type="radio" name="pregunta3" value="D">
+                A las tres de la mañana
+            </label>
+        </label>
+        <br><br>
+
+        <strong>¿Qué salsa le pones a tus tacos?</strong><br>
+        <label>
+            <label>
+                <input type="radio" name="pregunta4" value="A" required>
+                Verde
+            </label>
+            <label>
+                <input type="radio" name="pregunta4" value="B">
+                Roja
+            </label>
+            <label>
+                <input type="radio" name="pregunta4" value="C">
+                Naranja (de habanero)
+            </label>
+            <label>
+                <input type="radio" name="pregunta4" value="D">
+                No me gusta la salsa
+            </label>
+        </label>
+        <br><br>
+
+        <strong>Prefieres los tacos con...</strong><br>
+        <label>
+            <label>
+                <input type="radio" name="pregunta5" value="A" required>
+                Tortilla grasienta
+            </label>
+            <label>
+                <input type="radio" name="pregunta5" value="B">
+                Doble tortilla
+            </label>
+            <label>
+                <input type="radio" name="pregunta5" value="C">
+                Tortilla de harina
+            </label>
+            <label>
+                <input type="radio" name="pregunta5" value="D">
+                Tortilla de lechuga
+            </label>
+        </label>
+        <br><br>
+
+        <strong>¿Qué tipo de carne prefieres?</strong><br>
+        <label>
+            <label>
+                <input type="radio" name="pregunta6" value="A" required>
+                Cerdo
+            </label>
+            <label>
+                <input type="radio" name="pregunta6" value="B">
+                Borrego
+            </label>
+            <label>
+                <input type="radio" name="pregunta6" value="C">
+                Res
+            </label>
+            <label>
+                <input type="radio" name="pregunta6" value="D">
+                No como carne
+            </label>
+        </label>
+        <br><br>
+
+        <strong>La mayor parte del tiempo te sientes...</strong><br>
+        <label>
+            <label>
+                <input type="radio" name="pregunta7" value="A" required>
+                Feliz
+            </label>
+            <label>
+                <input type="radio" name="pregunta7" value="B">
+                Con mucha energía
+            </label>
+            <label>
+                <input type="radio" name="pregunta7" value="C">
+                Desanimado
+            </label>
+            <label>
+                <input type="radio" name="pregunta7" value="D">
+                Nostálgico
+            </label>
+        </label>
+        <br><br>
+
+        <strong>¿A quién llevarías a los tacos?</strong><br>
+        <label>
+            <label>
+                <input type="radio" name="pregunta8" value="A" required>
+                Tu novia
+            </label>
+            <label>
+                <input type="radio" name="pregunta8" value="B">
+                Tus compas
+            </label>
+            <label>
+                <input type="radio" name="pregunta8" value="C">
+                Tu familia
+            </label>
+            <label>
+                <input type="radio" name="pregunta8" value="D">
+                Prefieres ir sol@
+            </label>
+        </label>
+        <br><br>
+
+        <strong>¿Con qué frecuencia comes tacos?
+        </strong><br>
+        <label>
+            <label>
+                <input type="radio" name="pregunta9" value="A" required>
+                Una vez a la semana
+            </label>
+            <label>
+                <input type="radio" name="pregunta9" value="B">
+                Diario
+            </label>
+            <label>
+                <input type="radio" name="pregunta9" value="C">
+                Una vez al mes
+            </label>
+            <label>
+                <input type="radio" name="pregunta9" value="D">
+                Casi nunca
+            </label>
+        </label>
+        <br><br>
+        <input type="hidden" name="numPreguntas" value="10">
+        <input type="submit" value="Enviar datos">
+        <input type="reset" value="Restaurar formulario">
+    </fieldset>
+    </form>
+</body>
+</html>

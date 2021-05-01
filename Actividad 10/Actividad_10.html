@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Solicitud de ingreso a la Universidad</legend>
+        <form action="Actividad_10.php" method="POST">
+            
+            <label>Nombre(s): 
+                <input type="text" name="nombre" required>
+            </label>
+
+            <br><br>
+            <label>Apellido paterno: 
+                <input type="text" name="apellidoPaterno" required>
+            </label>
+
+            <br><br>
+            <label>Apellido materno: 
+                <input type="text" name="apellidoMaterno" required>
+            </label>
+
+            <br><br>
+            <label for="">Sexo: 
+                <label>
+                    <input type="radio" name="genero" value="Mujer">
+                    Mujer
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="Hombre">
+                    Hombre
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="Otro">
+                    Otro
+                </label>
+                
+                
+            </label>
+
+            <br><br>
+            <label>Edad: 
+                <input name="edad" type="number" min="15" max="99" required>
+            </label>
+
+            <br><br>
+            <label>Correo electrónico: 
+                <input name="mail" type="email" required>
+            </label>
+
+            <br><br>
+            <label>Teléfono: 
+                <input name="tel" type="text" minlength="10" maxlength="10" required>
+            </label>
+
+            <br><br>
+            <label>Celular: 
+                <input name="cel" type="text" minlength="10" maxlength="10" required>
+            </label>
+
+            <br><br>
+            <label>Escuela de procedencia 
+                <br>
+                <select name="escuela">
+                    <option>Escuela Nacional Preparatoria</option>
+                    <option>CECyT</option>
+                    <option>Otra xd xd</option>
+                </select>
+            </label>
+
+            <br><br>
+            <label>Promedio
+                <input name="promedio" type="number" min="0" max="10">
+            </label>
+
+            <br><br>
+            <label>Primera opción: 
+                <input type="text" name="primeraOpcion" required>
+            </label>
+
+            <br><br>
+            <label>Segunda opción: 
+                <input type="text" name="segundaOpcion" required>
+            </label>
+
+            <br><br>
+            <input type="submit" value="Enviar" required>
+            <input type="reset" value="Limpiar" required>
+        </form> 
+    </fieldset>
+</body>
+</html>
