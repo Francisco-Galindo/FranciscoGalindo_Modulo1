@@ -58,7 +58,6 @@
                 break;
 
             case "descifrado":
-
                 /* 
                 Checa caracter por caracter para saber si tiene caracteres válidos, si no,
                 asigna el mensaje correspondiente
@@ -71,19 +70,21 @@
                     }
                 }
 
-                // Separando cada una de las letras del texto en morse en un arreglo
-                $cadeaArreglo = explode(" ", $cadena); 
+                if ($textoValido) {
+                    // Separando cada una de las letras del texto en morse en un arreglo
+                    $cadeaArreglo = explode(" ", $cadena); 
 
-                // Iterando por todas las subcadenas del arreglo, cada una representando una letra en morse
-                foreach ($cadeaArreglo as $indice => $subcadena) {
+                    // Iterando por todas las subcadenas del arreglo, cada una representando una letra en morse
+                    foreach ($cadeaArreglo as $indice => $subcadena) {
 
-                    // Iterando por cada una de las correspondencias
-                    foreach ($correspondenciasMorse as $normal => $morse) {
-                        if ($subcadena == $morse) {
-                            $traduccion .= $normal;
+                        // Iterando por cada una de las correspondencias
+                        foreach ($correspondenciasMorse as $normal => $morse) {
+                            if ($subcadena == $morse) {
+                                $traduccion .= $normal;
+                            }
                         }
                     }
-                }
+                }                 
                 break;
         }
 
