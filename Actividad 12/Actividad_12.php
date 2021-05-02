@@ -8,7 +8,12 @@
 </head>
 <body>
     <?php
-        /* Este programa se encarga de traducir ya sea texto a morse o viceversa, dependiendo de la información recibida en el formulario */
+        /* Este programa se encarga de traducir ya sea texto a morse o viceversa, dependiendo de la información recibida en el formulario 
+        
+        Se decició que la traducción de español a morse contuviera "/" entre las palabras y que la 
+        traducción de morse a español tuviera espacios simples (" ", sin "/") para
+        hacer posible una traducción del texto en ambas direcciones
+        */
 
         // Recibiendo datos del formulario
         $cadena =  $_POST["texto"];
@@ -27,10 +32,10 @@
                             "4"=>"....-", "5"=>".....", "6"=>"-....",
                             "7"=>"--...", "8"=>"---..", "9"=>"----.",
                             "0"=>"-----", "!"=>"--..--", "."=>".-.-.-",
-                            ","=>"-.-.--", "\""=>".-..-.", "?"=>"..--.."
-                            ];
+                            ","=>"-.-.--", "\""=>".-..-.", "?"=>"..--.."];
         
         $cadena = strtoupper($cadena);
+
         // Haciendo la traducción correspondiente ("cifrado" para pasar de español a morse, "descifrado" para la acción contraria).
         $traduccion = "";
         $textoValido = true;
