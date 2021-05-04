@@ -13,7 +13,7 @@
 
       const CASILLA_VACIA = "./water.png";
 
-      // const CASILLA_LLENA = "./boat.png"; //Descomentar para que se vea dónde están los barcos
+      //const CASILLA_LLENA = "./boat.png"; //Descomentar para que se vea dónde están los barcos
       const CASILLA_LLENA = "./water2.png"; // Descomentar para juego normal
 
       const CASILLA_FALLO = "./barrier.png";
@@ -154,6 +154,10 @@
           $disparoValido = ($posX >= 0 && $posY >= 0 && $posY < $tableroTamano) ? $disparoValido : false;
 
 
+          // Recibiendo el historial de disparos que fue enviado por el formulario.
+          if (isset($_POST["historialDisparos"])) {
+            $disparosHistorialCadena = $_POST["historialDisparos"];
+          }
           if ($disparoValido) {
             switch ($tablero[$posX][$posY]) {
               case CASILLA_LLENA:
@@ -165,10 +169,6 @@
                 break;
             }
 
-            // Recibiendo el historial de disparos que fue enviado por el formulario.
-            if (isset($_POST["historialDisparos"])) {
-              $disparosHistorialCadena = $_POST["historialDisparos"];
-            }
             // Añadiendo el nuevo disparo al historial
             if ($disparosHistorialCadena == "") {
               $disparosHistorialCadena = strtoupper($_POST["coordX"]) . $_POST["coordY"];
