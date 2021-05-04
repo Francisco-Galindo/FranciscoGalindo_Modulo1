@@ -136,7 +136,7 @@
         default:
           $tablero = $_POST["tablero"];
 
-          // Checando si ya no quedan casillas con barcos en el tablero, de otra manera, no se ha alcanzado la victoria
+          // Desmarcando las casillas donde hubo errores de disparo
           $victoria = true;
           for ($x = 0; $x < $tableroTamano; $x++) {
             for ($y = 0; $y < $tableroTamano; $y++) {
