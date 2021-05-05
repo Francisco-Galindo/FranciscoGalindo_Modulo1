@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <fieldset>   
+              <legend>Reloj mundial</legend>
+              <form action="minecraft.php" method="POST">
+                <label>Ingrese hora (CDMX)
+                  <input type="time" name="hora" required>
+                </label>
+        
+                <br><br>
+
+                <p>Elige los países que quieres consultar</p>
+
+                <input type="hidden" name="ciudad[]" value="Ciudad de México">
+
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>Nueva York</td>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="ciudad[]" value="Nueva York">
+                        </label>
+                      </td>
+
+                      <td>Sao Paulo</td>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="ciudad[]"  value="Sao Paulo">   
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Madrid</td>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="ciudad[]"  value="Madrid">  
+                        </label>
+                      </td>
+
+                      <td>París</td>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="ciudad[]"  value="París">
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Roma</td>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="ciudad[]"  value="Roma">      
+                        </label>
+                      </td>
+
+                      <td>Atenas</td>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="ciudad[]"  value="Atenas">
+                          
+                        </label>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Beijin</td>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="ciudad[]"  value="Beijin">
+                        </label>
+                      </td>
+
+                      <td>Tokio</td>
+                      <td>
+                        <label>
+                          <input type="checkbox" name="ciudad[]"  value="Tokio">
+                        </label>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+
+                <input type="submit" name="reloj" value="Consultar">
+              </form>
+            </fieldset>
+          </td>
+
+
+
+
+          <td>
+            <fieldset>
+              <legend>Calculadora cumpleaños</legend>
+              <form action="minecraft.php" method="POST">
+                <label>Ingrese su fecha de nacimiento
+                  <input type="date" name="fecha" required>
+                </label>
+                <br><br>
+
+                <p>Elige los países que quieres consultar</p>
+
+                <label>
+                  <input type="checkbox" name="unidadTiempo[]" value="Días">
+                  Los días que faltan para el próximo  cumpleaños
+                </label>
+                <br>
+                <label>
+                  <input type="checkbox" name="unidadTiempo[]"  value="Horas">
+                  Las horas que faltan para el próximo cumpleaños
+                </label>
+                <br>
+                <label>
+                  <input type="checkbox" name="unidadTiempo[]"  value="Minutos">
+                  Los minutos que faltan para el próximo cumpleaños 
+                </label>
+                <br>
+                <label>
+                  <input type="checkbox" name="unidadTiempo[]"  value="¿Es fin de  semana?">
+                  ¿Será fin de semana?
+                </label>
+                
+                <br><br>
+                <input type="submit" name="cumple" value="Calcular">
+              </form>
+            </fieldset> 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</body>
+</html>
