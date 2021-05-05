@@ -79,12 +79,10 @@
         $fechaCumple = localtime(strtotime($fecha), true);
 
 
-        // Cambiando el año del cumpleaños dependiendo del día en el que haya sido
-        if ($fechaArreglo[0] - 1900 <= $diaHoy["tm_year"]) {
-          $fechaArreglo[0] = $diaHoy["tm_year"] + 1900;
-          if ($fechaCumple["tm_yday"] <= $diaHoy["tm_yday"]) {
-            $fechaArreglo[0]++;
-          }
+        // Cambiando el año del cumpleaños dependiendo del día en el que sea
+        $fechaArreglo[0] = $diaHoy["tm_year"] + 1900;
+        if ($fechaCumple["tm_yday"] <= $diaHoy["tm_yday"]) {
+          $fechaArreglo[0]++;
         }
         $fecha = implode("-", $fechaArreglo);
         $fechaCumple = localtime(strtotime($fecha), true);
