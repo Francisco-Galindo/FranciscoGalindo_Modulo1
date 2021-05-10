@@ -1,6 +1,7 @@
 <?php
     session_start();
 
+    // Recibiendo la información del formulario en caso de que no haya una sesión ya existente
     if (!isset($_SESSION["nombre"]) && isset($_POST["nombre"])) {
         $_SESSION["nombre"] = $_POST["nombre"];
         $_SESSION["apellidos"] = $_POST["apellidos"];
@@ -10,10 +11,13 @@
         $_SESSION["contra"] = $_POST["contra"];
         
     }
+    // Cerrando la sesión en caso de que no haya información en el formulario y no exista información de la sesión, para ser redirigidos al formulario
     elseif (!isset($_SESSION["nombre"]) && !isset($_POST["nombre"])) {
         header("location: ./cerrar.php");
     }
     
+
+    // Imprimiendo la tabla de información de inicio de sesión
     echo "<table border='1'>
     <thead>
         <tr>

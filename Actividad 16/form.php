@@ -1,9 +1,11 @@
 <?php
     session_start();
 
+    // Enviando a index en caso de que haya información sobre la sesión
     if (isset($_SESSION["nombre"])) {
         header("location: ./index.php");
     }
+    // Imprimiendo el formulario
     else {
         echo '<fieldset>
                 <legend>Inicio de sesión</legend>
